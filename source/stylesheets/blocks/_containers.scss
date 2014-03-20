@@ -1,0 +1,34 @@
+// General Containers
+
+$containers-bp: $breakpoint-desktop;
+
+.l-constrained {
+  @include outer-container;
+  width: 100%;
+  max-width: 30em;
+  padding: 0 $page-gutter;
+  margin: auto;
+
+  @include media-ie($containers-bp) {
+    max-width: $max-width;
+  }
+} // .l-constrained
+
+.l-main {
+  margin-bottom: 2em;
+
+  @include media-ie($containers-bp) {
+    @include span-columns(8);
+  }
+} // .l-main
+
+.l-sidebar {
+  max-width: 25em;
+  margin: auto;
+
+  @include media-ie($containers-bp) {
+    @include span-columns(4);
+    max-width: none;
+    margin-right: 0;
+  }
+} // .l-sidebar
